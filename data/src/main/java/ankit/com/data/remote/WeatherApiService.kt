@@ -11,7 +11,8 @@ interface WeatherApiService {
 
     companion object {
         const val BASE_URL = "https://api.openweathermap.org/data/2.5/"
-        const val API_KEY = "a56317f0d67753ad926f8d0e196db95a"
+        //please add api key to run the app
+        const val API_KEY = ""
     }
 
     @GET("weather")

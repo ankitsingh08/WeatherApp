@@ -57,6 +57,7 @@ class WeatherDetailsViewModelTest {
         Dispatchers.setMain(testCoroutineDispatcher)
     }
 
+    //TODO Fix the issue for spannable string mock
     @Test
     fun `get weather by city name usecase returns weather data success scenario`() = testCoroutineScope.runBlockingTest {
         val testData = getWeatherDataByCity()
