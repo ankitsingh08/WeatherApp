@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dp16">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_city_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/search"
+            app:layout_constraintLeft_toRightOf="@+id/search"
+            android:text="@string/search"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/gps_search_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchBtn" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/root_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gps_search_btn">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cityName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp24"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp42"
+                    android:textStyle="bold"
+                    tools:text="London" />
+
+                <TextView
+                    android:id="@+id/currentTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp24"
+                    android:layout_marginEnd="@dimen/dp24"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/sp32"
+                    android:textStyle="bold"
+                    tools:text="31°C" />
+
+                <TextView
+                    android:id="@+id/feelsLike"
+                    style="@style/ForecastTextStyle"
+                    android:layout_marginTop="@dimen/dp32"
+                    tools:text="Mar 10, 2020" />
+
+                <TextView
+                    android:id="@+id/windSpeed"
+                    style="@style/ForecastTextStyle"
+                    android:layout_marginTop="@dimen/dp8"
+                    tools:text="Wind speed: 1.91" />
+
+                <TextView
+                    android:id="@+id/airPressure"
+                    style="@style/ForecastTextStyle"
+                    android:layout_marginTop="@dimen/dp8"
+                    tools:text="Air pressure: 73" />
+
+                <TextView
+                    android:id="@+id/humidity"
+                    style="@style/ForecastTextStyle"
+                    android:layout_marginTop="@dimen/dp8"
+                    tools:text="Humidity: 1.91" />
+
+                <TextView
+                    android:id="@+id/minTemperature"
+                    style="@style/ForecastTextStyle"
+                    android:layout_marginTop="@dimen/dp8"
+                    tools:text="Visibility: 5.84" />
+
+                <TextView
+                    android:id="@+id/maxTemperature"
+                    style="@style/ForecastTextStyle"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:layout_marginBottom="@dimen/dp32"
+                    tools:text="Predictability: 70%" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="weather">Weather</string>
+    <string name="enter_city_name">Enter city name</string>
+    <string name="my_location">My location</string>
+    <string name="date">Date</string>
+    <string name="search">Search</string>
+    <string name="permission_denied_explanation">
+        Permission was denied, but is needed for core functionality.
+    </string>
+    <string name="permission_rationale">
+        Location permission is needed for core functionality
+    </string>
+    <string name="settings">Settings</string>
+</resources>
