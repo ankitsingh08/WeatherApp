@@ -3,7 +3,7 @@ Features Implemented
 - Display weather deatils for user's location using location coordinates of user.
 - Display weather details for city using search by city name.
 
-Please add openweather ApI Key in WeatherApiService.kt to run the app
+For running the app, any developer would need their OpenWeather Api key. Their OpenWeather api key needs to be updated in WeatherApiService.kt to run the app. I have added a comment for the same in that class.
 
 # Unit Test Cases
 Unit test cases are included for the following:
